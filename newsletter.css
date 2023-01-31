@@ -1,0 +1,54 @@
+#container06 .wrapper .inner .newsletter {
+    display: block;
+  }
+  #container06 .wrapper .inner .newsletter #input {
+    height: 2rem;
+    width: 20rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    font-family: "Bai Jamjuree";
+    background-color: rgba(0, 0, 0, 0.4);
+    border-width: 0;
+    padding: 10px;
+  }
+  #container06 .wrapper .inner .newsletter #input:focus {
+    outline: none;
+  }
+  #container06 .wrapper .inner .newsletter #button {
+    height: 2rem;
+    width: 5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.6rem;
+    font-family: "Bai Jamjuree";
+    background-color: rgba(0, 0, 0, 0.5);
+    border-width: 0;
+    transition: 0.2s ease;
+  }
+  #container06 .wrapper .inner .newsletter #button:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgb(0, 0, 0, 1);
+  }
+  #container06 .wrapper .inner .newsletter #button:active {
+    background-color: rgb(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+  }
+  #container06 .wrapper .inner .newsletter #subscribed {
+    font-family: "Bai Jamjuree";
+    display: inline-block;
+    font-size: 0.8rem;
+    color: rgb(86, 255, 86);
+    margin-top: 1rem;
+  }
+  #container06 .wrapper .inner .newsletter #error {
+    font-family: "Bai Jamjuree";
+    display: inline-block;
+    font-size: 0.8rem;
+    color: rgb(255, 86, 86);
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    #container06 .wrapper .inner .newsletter #button {
+      margin-top: 1rem;
+    }
+  }
