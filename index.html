@@ -33,6 +33,18 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="newsletter.css" />
+    <script>
+      function validate(event) {
+        event.preventDefault();
+        grecaptcha.execute();
+      }
+
+      function onload() {
+        var element = document.getElementById("button");
+        element.onclick = validate;
+      }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <noscript>
       <style>
         body {
@@ -293,6 +305,10 @@
                   and conquer.
                 </p>
                 <!-- Start of newsletter input -->
+                <script>
+                  onload();
+                </script>
+
                 <div class="newsletter">
                   <form name="submit-to-google-sheet">
                     <input
@@ -303,6 +319,13 @@
                       required
                     />
                     <button type="submit" id="button">Submit</button>
+                    <div
+                      id="recaptcha"
+                      class="g-recaptcha"
+                      data-sitekey="6Ldf7T4kAAAAABdsBiRN2-E_X7JJInc0pIZ0WBEj"
+                      data-callback="onSubmit"
+                      data-size="invisible"
+                    ></div>
                   </form>
                   <br />
                   <span id="subscribed"></span>
@@ -314,7 +337,7 @@
                   const form = document.forms["submit-to-google-sheet"];
                   const subscribedSpan = document.getElementById("subscribed");
                   const errorSpan = document.getElementById("error");
-                  
+
                   form.addEventListener("submit", (e) => {
                     e.preventDefault();
                     fetch(scriptURL, {
